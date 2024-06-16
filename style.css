@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+:root {
+  --primary-color-brightOrange: hsl(31, 77%, 52%);
+  --primary-color-darkCyan: hsl(184, 100%, 22%);
+  --primary-color-veryDarkCyan: hsl(179, 100%, 13%);
+  --neutral-color-transparentWhitePG: hsla(0, 0%, 100%, 0.75);
+  --neutral-color-veryLightGray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--neutral-color-veryLightGray);
+  font-size: 15px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 968px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sedans,
+.suvs,
+.luxury {
+  padding: 40px 50px;
+}
+
+.content h1 {
+  margin: 20px 0;
+  text-transform: uppercase;
+  color: var(--neutral-color-veryLightGray);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.content p {
+  color: var(--neutral-color-transparentWhitePG);
+  line-height: 1.6;
+  margin-bottom: 80px;
+}
+
+.content button {
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-weight: 700;
+  background-color: var(--neutral-color-veryLightGray);
+  border: 2px solid var(--neutral-color-veryLightGray);
+}
+
+.content button:hover {
+  background-color: transparent;
+  cursor: pointer;
+  color: var(--neutral-color-veryLightGray);
+}
+
+.sedans button {
+  color: var(--primary-color-brightOrange);
+}
+
+.suvs button {
+  color: var(--primary-color-darkCyan);
+}
+
+.luxury button {
+  color: var(--primary-color-veryDarkCyan);
+}
+
+.sedans {
+  background-color: var(--primary-color-brightOrange);
+}
+
+.suvs {
+  background-color: var(--primary-color-darkCyan);
+}
+
+.luxury {
+  background-color: var(--primary-color-veryDarkCyan);
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    margin: 70px 40px;
+  }
+
+  .sedans,
+  .suvs,
+  .luxury {
+    padding: 50px 65px;
+    margin: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .content {
+    grid-template-columns: 1fr;
+    margin: 60px 30px;
+  }
+
+  .sedans,
+  .suvs,
+  .luxury {
+    padding: 50px 65px;
+  }
+
+  .content h1 {
+    font-size: 38px;
+    margin: 30px 0 20px 0;
+  }
+
+  .content p {
+    margin-bottom: 30px;
+  }
+}
